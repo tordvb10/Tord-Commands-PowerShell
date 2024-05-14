@@ -2,7 +2,7 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
 
 <ol>
   <li>
-    Frist fork this project, you can adjust the naming yourself afterwards (If your name is not Tord ;) )<br/>
+    Frist fork this project, you can adjust the naming yourself afterwards (If your name is not Tord ;) )<br/> <br/>
   </li>
   <li>
     Set up environment variables on you computer, it's what you'll call them, see for instance picture below.
