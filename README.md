@@ -46,7 +46,7 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
        This means:
       <li>
         ```
-        . $env:"YourVariableName"\YourScriptName.ps1
+        . $env:"YourVariableName"\"YourScriptName".ps1
         ```
       </li>
     </ul>
