@@ -17,14 +17,14 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
     <br/>
   </li>
   <li>
-    If you open Windows PowerShell, and type '$PROFILE', it will display the folderpath Windows PowerShell run everytime it opens a new Powershell window. Normally that path does not exist by default, at least it did not for me. <br/>It can be create by command:
+    If you open Windows PowerShell, and type '$PROFILE', it will display the folderpath Windows PowerShell run everytime it opens a new Powershell window. Normally that path does not exist by default, at least it did not for me. <br/><br/>It can be create by command:
     <ul>
       <li>
         ```
         New-Item -Path $PROFILE -ItemType File -Force
         ```
       </li>
-    </ul>
+    </ul><br/>
     And to open it:
     <ul>
       <li>
