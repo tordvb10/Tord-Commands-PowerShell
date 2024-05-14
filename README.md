@@ -2,7 +2,7 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
 
 <ol>
   <li>
-    Frist fork this project, you can adjust the naming yourself afterwards (If your name is not Tord ;) )
+    Frist fork this project, you can adjust the naming yourself afterwards (If your name is not Tord ;) )<br/>
   </li>
   <li>
     Set up environment variables on you computer, it's what you'll call them, see for instance picture below.
@@ -14,9 +14,10 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
         Select "Environment variables", and go to "system variables and select "New..."
       </li>
     </ul>
+    <br/>
   </li>
   <li>
-    If you open Windows PowerShell, and type '$PROFILE', it will display the folderpath Windows PowerShell run everytime it opens a new Powershell window. Normally that path does not exist by default, at least it did not for me. it can be create by command:
+    If you open Windows PowerShell, and type '$PROFILE', it will display the folderpath Windows PowerShell run everytime it opens a new Powershell window. Normally that path does not exist by default, at least it did not for me. <br/>It can be create by command:
     <ul>
       <li>
         ```
@@ -24,7 +25,6 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
         ```
       </li>
     </ul>
-    <br/>
     And to open it:
     <ul>
       <li>
