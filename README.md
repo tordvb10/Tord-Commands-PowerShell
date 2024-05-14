@@ -34,4 +34,22 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
       </li>
     </ul>
   </li>
+  <br/>
+  <li>
+    In the script at the path `$PROFILE`, you'd want to add the command that adds script with self-created functions to use in powershell. <br/><br/>I added this command:
+     <ul>
+      <li>
+        ```
+        . $env:MyDir\Bin.ps1
+        ```
+      </li>
+       This means:
+      <li>
+        ```
+        . $env:"YourVariableName"\YourScriptName.ps1
+        ```
+      </li>
+    </ul>
+    
+  </li>
 </ol>
