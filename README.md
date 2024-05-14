@@ -14,6 +14,7 @@ You can run the command "Tord" as if it was a "git" command, you'll be creating 
         Select "Environment variables", and go to "system variables and select "New..."
       </li>
     </ul>
+    <img src = "assets\image.png">
     <br/>
   </li>
   <li>
