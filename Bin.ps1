@@ -1,4 +1,3 @@
-# Define the Tord function
 function Tord {
     param (
         [string]$SubCommand,
@@ -6,35 +5,36 @@ function Tord {
         [bool]$ShowErrors = $true
     )
 
-    # Check if Get-FolderSize function is already loaded
-    if (-not (Get-Command Get-FolderSize -ErrorAction SilentlyContinue)) {
-        # Load the script containing the Get-FolderSize function
-        $scriptPath = Join-Path $PSScriptRoot "subcommands\Get-FolderSize.ps1"
+    # Function to import subcommand script
+    function Import-SubCommandScript {
+        param (
+            [string]$SubCommand
+        )
+
+        $scriptPath = Join-Path $PSScriptRoot "subcommands\$SubCommand.ps1"
+        Write-Host "Looking for script at path: $scriptPath"
+
         if (Test-Path $scriptPath) {
             . $scriptPath
-            Write-Host "Get-FolderSize function loaded."
+            Write-Host "$SubCommand function loaded into global scope."
         } else {
-            Write-Host "Failed to load Get-FolderSize.ps1. Please make sure the script exists in the correct location."
-            return
+            Write-Host "Failed to load $SubCommand.ps1. Please make sure the script exists in the correct location."
+            return $false
         }
+
+        return $true
     }
 
-    Write-Host "Tord function called with SubCommand: $SubCommand"
-
+    # Check if SubCommand is provided
     if (-not $SubCommand) {
         Write-Host "Subcommand not provided"
         return
     }
 
-    switch ($SubCommand) {
-        "FolderSize" {
-            Write-Host "Executing Get-FolderSize"
-            Get-FolderSize -FolderPath $FolderPath -ShowErrors $ShowErrors
-            return
-        }
-        default {
-            Write-Host "Unknown subcommand: $SubCommand"
-            return
-        }
-    }
+    # Load the subcommand script
+    Import-SubCommandScript -SubCommand $SubCommand
+
+    # Execute the subcommand function
+    Write-Host "Tord function called with SubCommand: $SubCommand"
+    & $SubCommand -FolderPath $FolderPath -ShowErrors $ShowErrors
 }

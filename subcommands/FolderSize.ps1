@@ -1,7 +1,7 @@
-function Get-FolderSize {
+function global:FolderSize {
     param (
-        [string]$FolderPath = (Get-Location).Path,
-        [bool]$ShowErrors = $true
+        [string]$FolderPath,
+        [bool]$ShowErrors
     )
 
     Write-Host "Calculating folder size for: $FolderPath"
@@ -42,4 +42,4 @@ function Get-FolderSize {
 
     $sizeFormatted = "{0:N2} {1}" -f $size, $prefixes[$index]
     Write-Host "Folder Size: $sizeFormatted"
-}
+}   
