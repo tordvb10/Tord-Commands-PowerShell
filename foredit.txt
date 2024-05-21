@@ -1,0 +1,18 @@
+function Parse-Object {
+    param (
+        [Parameter(Mandatory=$true)]
+        [object]$InputObject
+    )
+
+    # Access properties of the InputObject
+    Write-Host "Property1: $($InputObject.Property1)"
+    Write-Host "Property2: $($InputObject.Property2)"
+}
+
+# Example usage
+$obj = [PSCustomObject]@{
+    Property1 = "Value1"
+    Property2 = "Value2"
+}
+
+Parse-Object -InputObject $obj

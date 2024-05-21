@@ -2,7 +2,8 @@ function Tord {
     param (
         [string]$SubCommand,
         [string]$FolderPath = (Get-Location).Path,
-        [bool]$ShowErrors = $true
+        [bool]$ShowErrors = $true,
+        [string]$Repo = ""
     )
     # Function to import subcommand script
     function Import-SubCommandScript {
@@ -30,6 +31,6 @@ function Tord {
     if (Import-SubCommandScript -SubCommand $SubCommand){
         # Execute the subcommand function
         #Write-Host "Tord function called with SubCommand: $SubCommand"
-        return & $SubCommand -FolderPath $FolderPath -ShowErrors $ShowErrors
+        return & $SubCommand -FolderPath $FolderPath -ShowErrors $ShowErrors -Repo $Repo
     }
 }
