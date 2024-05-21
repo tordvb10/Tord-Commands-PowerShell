@@ -4,4 +4,5 @@ function global:HelloWorld {
         [bool]$ShowErrors
     )
     Write-Host "HelloWorld"
+    return
 }

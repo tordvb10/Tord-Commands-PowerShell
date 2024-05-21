@@ -4,4 +4,5 @@ function global:BatteryLevel {
         [bool]$ShowErrors
     )
     Write-Host "BatteryLevel at: "(Get-WmiObject -Class Win32_Battery).EstimatedChargeRemaining"%"
+    return
 }

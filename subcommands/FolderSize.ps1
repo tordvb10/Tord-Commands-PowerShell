@@ -34,4 +34,5 @@ function global:FolderSize {
     }
     $sizeFormatted = "{0:N2} {1}" -f $size, $prefixes[$index]
     Write-Host "Folder Size: $sizeFormatted"
+    return
 }   

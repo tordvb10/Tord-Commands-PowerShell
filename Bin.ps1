@@ -30,6 +30,6 @@ function Tord {
     if (Import-SubCommandScript -SubCommand $SubCommand){
         # Execute the subcommand function
         #Write-Host "Tord function called with SubCommand: $SubCommand"
-        & $SubCommand -FolderPath $FolderPath -ShowErrors $ShowErrors
+        return & $SubCommand -FolderPath $FolderPath -ShowErrors $ShowErrors
     }
 }
